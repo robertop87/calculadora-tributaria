@@ -19,9 +19,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <!-- <activity android:name=".RCIVADependientes"></activity>-->
+        <!-- <activity android:name=".RCIVAActivity"></activity>-->
         <activity
-            android:name=".RCIVADependientes"
+            android:name=".dependientes.RCIVAActivity"
             android:label="RC-IVA para dependientes"
             android:parentActivityName=".MainActivity"
             android:screenOrientation="portrait">

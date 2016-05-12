@@ -1,9 +1,11 @@
-package com.alenasoft.caltrib;
+package com.alenasoft.caltrib.dependientes;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class RCIVADependientes extends AppCompatActivity {
+import com.alenasoft.caltrib.R;
+
+public class RCIVAActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

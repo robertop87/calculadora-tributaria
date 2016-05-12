@@ -1,9 +1,5 @@
 package com.alenasoft.caltrib;
 
-import android.app.Activity;
-import android.app.AlertDialog;
-import android.app.Fragment;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -12,6 +8,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import com.alenasoft.caltrib.dependientes.RCIVAActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -26,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), RCIVADependientes.class);
+                Intent intent = new Intent(getApplicationContext(), RCIVAActivity.class);
                 startActivity(intent);
             }
         });

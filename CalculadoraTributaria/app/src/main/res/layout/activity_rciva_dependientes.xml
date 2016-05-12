@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    tools:context="com.alenasoft.caltrib.RCIVADependientes"
+    tools:context=".dependientes.RCIVAActivity"
     android:padding="5dp"
     android:orientation="vertical">
 
