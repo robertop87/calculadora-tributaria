@@ -8,19 +8,28 @@ import junit.framework.TestCase;
  */
 public class RCIVAcalcTest extends TestCase {
 
-    public void testCalculate() {
+    private RCIVAdata firstCase;
+
+    public RCIVAcalcTest()
+    {
+        this.firstCase = new RCIVAdata();
+        this.firstCase.totalIncoming = 10275.0;
+        this.firstCase.socialSecurityDiscount = 1306.0;
+        this.firstCase.bruteIncoming = 8969.0;
+        this.firstCase.doubleMinimumSalary = 3610.0;
+        this.firstCase.diffToDoubleMinimumSalary = 5359.0;
+        this.firstCase.determinedTax = 697.0;
+        this.firstCase.doubleMinimumTax = 469.0;
+        this.firstCase.taxToBePayed = 228.0;
+        this.firstCase.minimumMountToDeclare = 1754.0;
+    }
+
+    public void testCalculateFirstWellKnownCase() {
         RCIVAcalc testee = new RCIVAcalc();
         double totalIncoming = 10275.0;
 
-        testee.calculate(totalIncoming);
+        RCIVAdata result = testee.calculate(totalIncoming);
 
-        Assert.assertEquals(1306.0, testee.getSocialSecurityDiscount());
-        Assert.assertEquals(8969.0, testee.getBruteIncoming());
-        Assert.assertEquals(3610.0, testee.getDoubleMinimunSalary());
-        Assert.assertEquals(5359.0, testee.getDiffWithDoubleMinimunSalary());
-        Assert.assertEquals(697.0, testee.getDeterminedTax());
-        Assert.assertEquals(469.0, testee.getDoubleMinimunTax());
-        Assert.assertEquals(228.0, testee.taxToBePayed);
-        Assert.assertEquals(1754.0, testee.getMinimunMountToDeclare());
+        Assert.assertEquals(this.firstCase, result);
     }
 }
