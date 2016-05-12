@@ -324,7 +324,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="10573"
+                android:text="0"
                 android:id="@+id/textView25"
                 android:gravity="center_vertical|right"
                 android:layout_gravity="center|right" />
