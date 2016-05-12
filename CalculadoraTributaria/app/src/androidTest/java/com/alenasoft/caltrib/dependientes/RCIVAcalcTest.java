@@ -9,6 +9,7 @@ import junit.framework.TestCase;
 public class RCIVAcalcTest extends TestCase {
 
     private RCIVAdata firstCase;
+    private RCIVAdata noTaxesCase;
 
     public RCIVAcalcTest()
     {
@@ -22,6 +23,17 @@ public class RCIVAcalcTest extends TestCase {
         this.firstCase.doubleMinimumTax = 469.0;
         this.firstCase.taxToBePayed = 228.0;
         this.firstCase.minimumMountToDeclare = 1754.0;
+
+        this.noTaxesCase = new RCIVAdata();
+        this.noTaxesCase.totalIncoming = 4000.0;
+        this.noTaxesCase.socialSecurityDiscount = 508.0;
+        this.noTaxesCase.bruteIncoming = 3492.0;
+        this.noTaxesCase.doubleMinimumSalary = 0;
+        this.noTaxesCase.diffToDoubleMinimumSalary = 0;
+        this.noTaxesCase.determinedTax = 0;
+        this.noTaxesCase.doubleMinimumTax = 0;
+        this.noTaxesCase.taxToBePayed = 0;
+        this.noTaxesCase.minimumMountToDeclare = 0;
     }
 
     public void testCalculateFirstWellKnownCase() {
@@ -31,5 +43,14 @@ public class RCIVAcalcTest extends TestCase {
         RCIVAdata result = testee.calculate(totalIncoming);
 
         Assert.assertEquals(this.firstCase, result);
+    }
+
+    public void testCalculateNoTaxesCase() {
+        RCIVAcalc testee = new RCIVAcalc();
+        double totalIncoming = 4000.0;
+
+        RCIVAdata result = testee.calculate(totalIncoming);
+
+        Assert.assertEquals(this.noTaxesCase, result);
     }
 }

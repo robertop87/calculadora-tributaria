@@ -17,12 +17,15 @@ public class RCIVAcalc {
         data.totalIncoming = totalIncoming;
         data.socialSecurityDiscount = Math.round(data.totalIncoming * RCIVAcalc.SOCIAL_SECURITY_FACTOR);
         data.bruteIncoming = data.totalIncoming - data.socialSecurityDiscount;
-        data.doubleMinimumSalary = RCIVAcalc.MINIMUM_SALARY * 2;
-        data.diffToDoubleMinimumSalary = data.bruteIncoming - data.doubleMinimumSalary;
-        data.determinedTax = Math.round(data.diffToDoubleMinimumSalary * RCIVAcalc.DEFAULT_TAX);
-        data.doubleMinimumTax = Math.round(data.doubleMinimumSalary * DEFAULT_TAX);
-        data.taxToBePayed = data.determinedTax - data.doubleMinimumTax;
-        data.minimumMountToDeclare = Math.round(data.taxToBePayed * INVOICES_PAY_FACTOR);
+
+        if (data.bruteIncoming > (4 * RCIVAcalc.MINIMUM_SALARY) ) { // RESOLUCION ADMINISTRATIVA N° 05-0040-99, INSTRUCTIVO 1
+            data.doubleMinimumSalary = RCIVAcalc.MINIMUM_SALARY * 2;
+            data.diffToDoubleMinimumSalary = data.bruteIncoming - data.doubleMinimumSalary;
+            data.determinedTax = Math.round(data.diffToDoubleMinimumSalary * RCIVAcalc.DEFAULT_TAX);
+            data.doubleMinimumTax = Math.round(data.doubleMinimumSalary * RCIVAcalc.DEFAULT_TAX);
+            data.taxToBePayed = data.determinedTax - data.doubleMinimumTax;
+            data.minimumMountToDeclare = Math.round(data.taxToBePayed * RCIVAcalc.INVOICES_PAY_FACTOR);
+        }
 
         return data;
     }
