@@ -1,7 +1,10 @@
 package com.alenasoft.caltrib;
 
+import android.app.Activity;
 import android.app.AlertDialog;
+import android.app.Fragment;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
@@ -22,18 +25,9 @@ public class MainActivity extends AppCompatActivity {
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                AlertDialog alertDialog = new AlertDialog.Builder(MainActivity.this).create();
-                alertDialog.setTitle("RC-IVA Dependientes");
-                alertDialog.setMessage("Ingrese su salario neto (sin descuentos)");
-
-                alertDialog.setButton("Calcular", new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int which) {
-                        // here you can add functions
-                    }
-                });
-
-                alertDialog.show();
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), RCIVADependientes.class);
+                startActivity(intent);
             }
         });
     }

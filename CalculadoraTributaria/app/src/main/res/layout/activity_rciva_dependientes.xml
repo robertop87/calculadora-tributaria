@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:context="com.alenasoft.caltrib.RCIVADependientes"
+    android:padding="5dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Ingreso total"
+            android:id="@+id/textView"
+            android:maxLines="1"
+            android:layout_gravity="center|right" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:ems="10"
+            android:id="@+id/editText"
+            android:text="0"
+            android:layout_gravity="center"
+            android:ellipsize="middle" />
+    </LinearLayout>
+
+    <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:shrinkColumns="1"
+        android:stretchColumns="0,2">
+
+        <View
+            android:layout_height="2dip"
+            android:background="#FF0000" />
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Descuento a la seguridad social 12.71 %"
+                android:id="@+id/textView3"
+                android:layout_marginLeft="5dp"
+                android:paddingRight="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="0"
+                android:id="@+id/textView4"
+                android:maxLines="1"
+                android:layout_gravity="center|end"
+                android:paddingLeft="5dp"
+                android:width="50dp"
+                android:minWidth="50dp" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="A"
+                android:id="@+id/textView5"
+                android:maxLines="1"
+                android:textColor="#f73b0c" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Ingreso neto o líquido pagable"
+                android:id="@+id/textView6"
+                android:layout_marginLeft="5dp"
+                android:paddingRight="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="0"
+                android:id="@+id/textView7"
+                android:maxLines="1"
+                android:layout_gravity="center|right"
+                android:paddingLeft="5dp"
+                android:width="50dp"
+                android:minWidth="50dp" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="B"
+                android:id="@+id/textView8"
+                android:maxLines="1"
+                android:textColor="#f73b0c" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="2 salarios mínimos nacionales (1805x2)"
+                android:id="@+id/textView9"
+                android:layout_marginLeft="5dp"
+                android:paddingRight="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="0"
+                android:id="@+id/textView10"
+                android:maxLines="1"
+                android:layout_gravity="center|right"
+                android:paddingLeft="5dp"
+                android:width="50dp"
+                android:minWidth="50dp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="C"
+                android:id="@+id/textView11"
+                android:maxLines="1"
+                android:textColor="#f73b0c" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Diferencia (A-B)"
+                android:id="@+id/textView12"
+                android:layout_marginLeft="5dp"
+                android:paddingRight="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="0"
+                android:id="@+id/textView13"
+                android:maxLines="1"
+                android:layout_gravity="center|right"
+                android:paddingLeft="5dp"
+                android:width="50dp"
+                android:minWidth="50dp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="D"
+                android:id="@+id/textView14"
+                android:maxLines="1"
+                android:textColor="#f73b0c" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Impuesto determinado (13% de C)"
+                android:id="@+id/textView15"
+                android:layout_marginLeft="5dp"
+                android:paddingRight="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="0"
+                android:id="@+id/textView16"
+                android:maxLines="1"
+                android:layout_gravity="center|right"
+                android:paddingLeft="5dp"
+                android:width="50dp"
+                android:minWidth="50dp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="E"
+                android:id="@+id/textView17"
+                android:maxLines="1"
+                android:textColor="#f73b0c" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="13% de 2 salarios mínimos"
+                android:id="@+id/textView18"
+                android:layout_marginLeft="5dp"
+                android:paddingRight="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="0"
+                android:id="@+id/textView19"
+                android:maxLines="1"
+                android:layout_gravity="center|right"
+                android:paddingLeft="5dp"
+                android:width="50dp"
+                android:minWidth="50dp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="F"
+                android:id="@+id/textView20"
+                android:maxLines="1"
+                android:textColor="#f73b0c" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Impuesto a pagar (D-E)"
+                android:id="@+id/textView21"
+                android:layout_marginLeft="5dp"
+                android:paddingRight="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="0"
+                android:id="@+id/textView22"
+                android:maxLines="1"
+                android:layout_gravity="center|right"
+                android:paddingLeft="5dp"
+                android:width="50dp"
+                android:minWidth="50dp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="G"
+                android:id="@+id/textView23"
+                android:maxLines="1"
+                android:textColor="#f73b0c" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Monto de facturas que puede presentar como pago a cuenta para cubrir el Impuesto a pagar ( F x 100/13)"
+                android:id="@+id/textView24"
+                android:layout_marginLeft="5dp"
+                android:paddingRight="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="0"
+                android:id="@+id/textView25"
+                android:maxLines="1"
+                android:layout_gravity="center|right"
+                android:paddingLeft="5dp"
+                android:width="50dp"
+                android:minWidth="50dp" />
+        </TableRow>
+    </TableLayout>
+
+</LinearLayout>
