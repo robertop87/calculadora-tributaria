@@ -88,7 +88,7 @@ public class MainActivity extends AppCompatActivity {
 
     private Dialog selectKindOfCalculous() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle("Seleccione una operación")
+        builder.setTitle(R.string.calculate)
                 .setItems(R.array.operations, new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
                         switch (which) {
@@ -106,7 +106,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void showNotAvailableYet() {
-        Toast.makeText(this, "Formulario no disponible", Toast.LENGTH_SHORT)
+        Toast.makeText(this, R.string.form_unavailable, Toast.LENGTH_SHORT)
                 .show();
     }
 }

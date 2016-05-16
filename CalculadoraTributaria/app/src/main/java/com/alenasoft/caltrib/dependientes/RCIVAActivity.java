@@ -76,7 +76,7 @@ public class RCIVAActivity extends AppCompatActivity {
                     catch (NumberFormatException nfe)
                     {
                         tableLayout.setVisibility(View.INVISIBLE);
-                        Toast.makeText(RCIVAActivity.this, "Ingreso total inválido", Toast.LENGTH_SHORT)
+                        Toast.makeText(RCIVAActivity.this, R.string.invalid_incoming, Toast.LENGTH_SHORT)
                                 .show();
                     }
                 }

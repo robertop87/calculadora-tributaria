@@ -23,8 +23,8 @@
 
 <resources>
     <string-array name="operations">
-        <item>Deuda Tributaria</item>
-        <item>RC-IVA Dependientes</item>
-        <item>IUE Independientes</item>
+        <item>@string/tax_debt</item>
+        <item>@string/rciva_dependents</item>
+        <item>@string/iue_independents</item>
     </string-array>
 </resources>

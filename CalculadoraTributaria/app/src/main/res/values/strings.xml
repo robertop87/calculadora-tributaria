@@ -1,4 +1,27 @@
 <resources>
     <string name="app_name">Calculadora Tributaria</string>
-    <string name="action_settings">Settings</string>
+    <string name="action_settings">Configuración</string>
+
+    <!-- APP MESSAGES -->
+    <string name="invalid_incoming">Ingreso total inválido</string>
+    <string name="calculate">Calcular...</string>
+    <string name="form_unavailable">Formulario no disponible</string>
+
+    <!-- OPERATIONS NAMES -->
+    <string name="tax_debt">Deuda Tributaria</string>
+    <string name="rciva_dependents">RC-IVA Dependientes</string>
+    <string name="iue_independents">IUE Independientes</string>
+
+    <!-- DEPENDENTS FORM LABELS -->
+    <string name="total_incoming">Ingreso total</string>
+    <string name="social_security_discount">Descuento a la seguridad social 12.71%</string>
+    <string name="brute_incoming">Ingreso neto o líquido pagable</string>
+    <string name="double_minimum_salary">2 salarios mínimos nacionales (1805x2)</string>
+    <string name="diff_ab">Diferencia (A-B)</string>
+    <string name="determined_tax">Impuesto determinado (13% de C)</string>
+    <string name="tax_double_minimum_salary">13% de 2 salarios mínimos</string>
+    <string name="tax_to_pay">Impuesto a pagar (D-E)</string>
+    <string name="mount_to_declare">Monto de facturas que puede presentar para cubrir el Impuesto (F x 100/13)</string>
+    <string name="legal_advice">El presente es un cálculo de carácter referencial que no tiene validez de carácter legal</string>
+
 </resources>

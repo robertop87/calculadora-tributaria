@@ -40,7 +40,7 @@
             android:layout_height="wrap_content"
             android:layout_column="1"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Ingreso total"
+            android:text="@string/total_incoming"
             android:id="@+id/textView"
             android:maxLines="1"
             android:layout_gravity="center_vertical|right" />
@@ -80,7 +80,7 @@
                 android:layout_height="wrap_content"
                 android:layout_column="1"
                 android:textAppearance="?android:attr/textAppearanceSmall"
-                android:text="Descuento a la seguridad social 12.71 %"
+                android:text="@string/social_security_discount"
                 android:id="@+id/textView3"
                 android:layout_marginLeft="5dp"
                 android:paddingRight="15dp" />
@@ -117,7 +117,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceSmall"
-                android:text="Ingreso neto o líquido pagable"
+                android:text="@string/brute_incoming"
                 android:id="@+id/textView6"
                 android:layout_marginLeft="5dp"
                 android:paddingRight="15dp" />
@@ -154,7 +154,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceSmall"
-                android:text="2 salarios mínimos nacionales (1805x2)"
+                android:text="@string/double_minimum_salary"
                 android:id="@+id/textView9"
                 android:layout_marginLeft="5dp"
                 android:paddingRight="15dp" />
@@ -190,7 +190,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceSmall"
-                android:text="Diferencia (A-B)"
+                android:text="@string/diff_ab"
                 android:id="@+id/textView12"
                 android:layout_marginLeft="5dp"
                 android:paddingRight="15dp" />
@@ -226,7 +226,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceSmall"
-                android:text="Impuesto determinado (13% de C)"
+                android:text="@string/determined_tax"
                 android:id="@+id/textView15"
                 android:layout_marginLeft="5dp"
                 android:paddingRight="15dp" />
@@ -261,7 +261,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="13% de 2 salarios mínimos"
+                android:text="@string/tax_double_minimum_salary"
                 android:id="@+id/textView18"
                 android:layout_marginLeft="5dp"
                 android:paddingRight="15dp" />
@@ -297,7 +297,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceSmall"
-                android:text="Impuesto a pagar (D-E)"
+                android:text="@string/tax_to_pay"
                 android:id="@+id/textView21"
                 android:layout_marginLeft="5dp"
                 android:paddingRight="15dp" />
@@ -334,7 +334,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceSmall"
-                android:text="Monto de facturas que puede presentar como pago a cuenta para cubrir el Impuesto a pagar ( F x 100/13)"
+                android:text="@string/mount_to_declare"
                 android:id="@+id/textView24"
                 android:layout_marginLeft="5dp"
                 android:paddingRight="15dp" />
@@ -360,7 +360,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="El presente es un cálculo de carácter referencial que no tiene validez de carácter legal"
+        android:text="@string/legal_advice"
         android:id="@+id/textView2"
         android:textStyle="italic"
         android:textSize="12dp"
