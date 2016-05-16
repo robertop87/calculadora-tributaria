@@ -61,16 +61,11 @@
     <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:shrinkColumns="1"
         android:stretchColumns="1"
         android:layout_margin="5dp"
         android:id="@+id/tableLayout_rcivaForm">
-
-        <View
-            android:layout_height="2dip"
-            android:background="#FF0000"
-            android:layout_width="match_parent" />
 
         <TableRow
             android:layout_width="wrap_content"
@@ -266,7 +261,6 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceSmall"
                 android:text="13% de 2 salarios mínimos"
                 android:id="@+id/textView18"
                 android:layout_marginLeft="5dp"
@@ -356,5 +350,20 @@
                 android:textStyle="bold" />
         </TableRow>
     </TableLayout>
+
+    <View
+        android:layout_height="2dip"
+        android:background="#FF0000"
+        android:layout_width="match_parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="El presente es un cálculo de carácter referencial que no tiene validez de carácter legal"
+        android:id="@+id/textView2"
+        android:textStyle="italic"
+        android:textSize="12dp"
+        android:layout_gravity="bottom" />
 
 </LinearLayout>

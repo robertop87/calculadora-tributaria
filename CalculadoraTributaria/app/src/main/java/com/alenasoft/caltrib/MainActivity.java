@@ -23,6 +23,9 @@
 
 package com.alenasoft.caltrib;
 
+import android.app.AlertDialog;
+import android.app.Dialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -31,6 +34,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import com.alenasoft.caltrib.dependientes.RCIVAActivity;
 
@@ -47,13 +51,17 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), RCIVAActivity.class);
-                startActivity(intent);
-            }
-        });
+        if (fab != null) {
+            fab.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Dialog operationsList = selectKindOfCalculous();
+                    operationsList.show();
+                }
+            });
+        } else {
+            showNotAvailableYet();
+        }
     }
 
     @Override
@@ -76,5 +84,29 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    private Dialog selectKindOfCalculous() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("Seleccione una operación")
+                .setItems(R.array.operations, new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        switch (which) {
+                            case 1: openRcIvaDependents(); break;
+                            default: showNotAvailableYet(); break;
+                        }
+                    }
+                });
+        return builder.create();
+    }
+
+    private void openRcIvaDependents() {
+        Intent intent = new Intent(getApplicationContext(), RCIVAActivity.class);
+        startActivity(intent);
+    }
+
+    private void showNotAvailableYet() {
+        Toast.makeText(this, "Formulario no disponible", Toast.LENGTH_SHORT)
+                .show();
     }
 }
